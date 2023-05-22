@@ -1314,7 +1314,7 @@ def create_quantitative_tables(params, output_dir, logger=None, force_override=F
                                                   "peak_clusters_volume.csv")
             for i, input_file in enumerate(input_files):
                 stem = input_file['stem']
-                peak_clusters_df[stem] = [cluster.file_volumes[i]
+                peak_clusters_df[stem] = [cluster.volumes[i]
                                           for cluster in peak_clusters]
         elif params['quant_isotopes'] == 'height':
             out_path_peak_clusters = os.path.join(output_dir, 'quant',
